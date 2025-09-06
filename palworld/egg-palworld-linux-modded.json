@@ -141,6 +141,26 @@
             "user_editable": true,
             "rules": "required|string|in:Steam,Xbox",
             "field_type": "text"
+        },
+        {
+            "name": "Enable RESTAPI",
+            "description": "",
+            "env_variable": "REST_API_ENABLED",
+            "default_value": "True",
+            "user_viewable": false,
+            "user_editable": false,
+            "rules": "required|string|in:True",
+            "field_type": "text"
+        },
+        {
+            "name": "RESTAPI Port",
+            "description": "",
+            "env_variable": "REST_API_PORT",
+            "default_value": "8212",
+            "user_viewable": true,
+            "user_editable": false,
+            "rules": "required|numeric",
+            "field_type": "text"
         }
     ]
 }
