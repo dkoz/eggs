@@ -12,7 +12,7 @@
         "steam_disk_space"
     ],
     "docker_images": {
-        "Proton": "ghcr.io\/parkervcp\/steamcmd:proton"
+        "Proton": "ghcr.io\/dkoz\/steamcmd:proton-legacy"
     },
     "file_denylist": [],
     "startup": ".\/PalworldServerConfigParser; (while read cmd; do rcon -s -a \"localhost:$RCON_PORT\" -p \"$ADMIN_PASSWORD\" \"$cmd\";done) < \/dev\/stdin & cd \/home\/container\/Pal\/Binaries\/Win64 && proton run .\/PalServer-Win64-Shipping.exe -publiclobby -useperfthreads -NoAsyncLoadingThread -UseMultithreadForDS -port={{SERVER_PORT}} -publicport={{SERVER_PORT}} -servername=\"{{SERVER_NAME}}\" -players={{MAX_PLAYERS}} $(if [ -n \"$SERVER_PASSWORD\" ]; then echo \"-serverpassword=\\\"${SERVER_PASSWORD}\\\"\"; fi) -adminpassword=\"{{ADMIN_PASSWORD}}\" -rcon",
