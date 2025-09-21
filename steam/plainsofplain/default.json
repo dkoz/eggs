@@ -1,0 +1,12 @@
+{
+    "serverName":"My Server",
+    "worldId":1,
+    "mapId":256,
+    "seed":12345,
+    "difficulty":1,
+    "worldSize":21,
+    "port":7777,
+    "queryPort":27016,
+    "maxPlayers":10,
+    "ttr":28800
+}
