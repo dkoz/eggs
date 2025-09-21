@@ -2,5 +2,7 @@
 Eggs for Pterodactyl
 
 ## Available Games
-- [Palworld](palworld)
+- [Steam Games](steam)
+  - [Palworld](steam/palworld)
+  - [Voyagers of Nera](steam/voyagersofnera)
 - [Discord Bots](bots)
