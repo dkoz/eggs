@@ -9,6 +9,6 @@ Survive a brutal open world alone or with friends. Explore a procedural wastelan
 
 ## Requirements
 - 4 GB RAM and 2 CPUs for 10 players
-- 8 GB RAM and 46 CPUs for 50 players
-- 16 GB RAM, 812 CPUs for 100 players
+- 8 GB RAM and 4-6 CPUs for 50 players
+- 16 GB RAM, 8-12 CPUs for 100 players
 - 32 GB RAM, 16 CPUs for 200 players
