@@ -4,7 +4,7 @@
         "version": "PTDL_v2",
         "update_url": null
     },
-    "exported_at": "2026-07-17T16:08:07-04:00",
+    "exported_at": "2026-07-17T16:39:36-04:00",
     "name": "Palworld Proton Modded",
     "author": "noreply@kozejin.dev",
     "description": "Fight, farm, build and work alongside mysterious creatures called \"Pals\" in this completely new multiplayer, open world survival and crafting game!",
@@ -15,7 +15,7 @@
         "Proton": "ghcr.io\/parkervcp\/steamcmd:proton"
     },
     "file_denylist": [],
-    "startup": ".\/PalworldServerConfigParser; export RESTAPI_PORT={{REST_API_PORT}} ADMIN_PASSWORD={{ADMIN_PASSWORD}}; (while read cmd; do .\/palcon \"$cmd\"; done) < \/dev\/stdin & cd \/home\/container\/Pal\/Binaries\/Win64 && proton run .\/PalServer-Win64-Shipping.exe -publiclobby -useperfthreads -NoAsyncLoadingThread -UseMultithreadForDS -port={{SERVER_PORT}} -publicport={{SERVER_PORT}} -servername=\"{{SERVER_NAME}}\" -players={{MAX_PLAYERS}} $(if [ -n \"$SERVER_PASSWORD\" ]; then echo \"-serverpassword=\\\"${SERVER_PASSWORD}\\\"\"; fi) -adminpassword=\"{{ADMIN_PASSWORD}}\" -rcon {{ENABLE_GAMEDATA}}",
+    "startup": ".\/PalworldServerConfigParser; export RESTAPI_PORT={{REST_API_PORT}} ADMIN_PASSWORD={{ADMIN_PASSWORD}} WINEDLLOVERRIDES=\"dwmapi=n,b\"; (while read cmd; do .\/palcon \"$cmd\"; done) < \/dev\/stdin & cd \/home\/container\/Pal\/Binaries\/Win64 && proton run .\/PalServer-Win64-Shipping.exe -publiclobby -useperfthreads -NoAsyncLoadingThread -UseMultithreadForDS -port={{SERVER_PORT}} -publicport={{SERVER_PORT}} -servername=\"{{SERVER_NAME}}\" -players={{MAX_PLAYERS}} $(if [ -n \"$SERVER_PASSWORD\" ]; then echo \"-serverpassword=\\\"${SERVER_PASSWORD}\\\"\"; fi) -adminpassword=\"{{ADMIN_PASSWORD}}\" -rcon {{ENABLE_GAMEDATA}}",
     "config": {
         "files": "{}",
         "startup": "{\r\n    \"done\": \"up and running.\"\r\n}",
@@ -114,10 +114,10 @@
             "name": "Enable RCON",
             "description": "Must Be ON",
             "env_variable": "RCON_ENABLE",
-            "default_value": "True",
+            "default_value": "False",
             "user_viewable": false,
             "user_editable": false,
-            "rules": "required|string|in:True",
+            "rules": "required|string|in:True,False",
             "field_type": "text"
         },
         {
